@@ -27,16 +27,6 @@ const sendEmail = () => {
     });
 };
 
-// const filePath = path.join(__dirname, 'test.html');
-// const html = fs.readFile(filePath, { encoding: 'utf-8' });
-
-// const mailOptions = {
-//     from: process.env.sender,
-//     to: process.env.receipient,
-//     subject: "Scheduld Email",
-//     html: html
-// };
-
 cron.schedule("* * * * *", async () => {
     sendEmail();
 });
